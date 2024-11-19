@@ -6,12 +6,15 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; 
+  overflow: hidden; 
 }
 
 form {
   display: flex;
   flex-direction: column;
   width: 100%;
+  box-sizing: border-box; 
 }
 
 .form-group {
@@ -29,12 +32,14 @@ label {
 input, textarea {
   padding: 12px 15px;
   margin-top: 5px;
-  width: 100%;
+  width: calc(100% - 30px);
+  max-width: 100%; 
   border: 2px solid #ddd;
   border-radius: 8px;
   font-size: 16px;
   background-color: #fff;
   transition: border-color 0.3s;
+  box-sizing: border-box;
 }
 
 input:focus, textarea:focus {
@@ -71,17 +76,6 @@ button:hover {
   accent-color: #4CAF50;
   cursor: pointer;
   -webkit-appearance: radio;
-}
-
-.post-type input[type="radio"] {
-  appearance: none;
-  border: 2px solid #4CAF50;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  outline: none;
-  cursor: pointer;
 }
 
 .post-type input[type="radio"]:checked::before {
